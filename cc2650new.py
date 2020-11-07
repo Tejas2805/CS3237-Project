@@ -145,7 +145,7 @@ class GyroscopeSensorMovementSensorMPU9250(MovementSensorMPU9250SubService):
         '''Returns (x_gyro, y_gyro, z_gyro) in units of degrees/sec'''
         rawVals = data[0:3]
         gyro_z_value = data[2]*self.scale
-       
+
         #print("[MovementSensor] Gyroscope:", tuple([ v*self.scale for v in rawVals ]))
 
 
@@ -163,10 +163,8 @@ class OpticalSensor(Sensor):
         value = 0.01 * (m << e)
         #print("[OpticalSensor] Reading from light sensor:", value)
         light_value = value
-       
-        indicator.append(value)
-            
 
+        indicator.append(value)
 
 class HumiditySensor(Sensor):
     def __init__(self):
@@ -265,7 +263,7 @@ async def run(address):
                 await led_and_buzzer.notify(client, 0x01)
 
             if cntr%20 == 0:
-                
+
                 # shine the green light
                # print("GPOMG TP CAMEEFERGE")
                 #print(temp_store)
@@ -274,7 +272,7 @@ async def run(address):
                 cntr = 0
 
             cntr += 1
-            
+
             #global light_value
             #global mag_value
             global gyro_z_value
@@ -283,7 +281,7 @@ async def run(address):
             #gyro_bool = gyro_z_door(gyro_z_value)
             #mag_bool = mag_door(mag_value)
             if (gyro_z_door(gyro_z_value)):
-            #if(mag_door(mag_value)): 
+            #if(mag_door(mag_value)):
                 print("Door just closed.. Lights, Camera, Action!")
                 camera.click_save_picture(img_number)
                 print("Photo clicked and saved...")
@@ -299,8 +297,6 @@ async def run(address):
                 img_number += 1
 
             #if cntr == 20
-
-
 
 def light_door(light_value):
     global light_just_opened
@@ -328,7 +324,7 @@ def gyro_z_door(gyro_z_value):
         gyro_z_first_confo = False
     return gyro_z_just_closed
 
-def mag_door(light_value):
+def mag_door(mag_value):
     global mag_just_opened
     mag_just_closed = False
     if (mag_value < 0):
@@ -338,7 +334,7 @@ def mag_door(light_value):
             mag_just_closed = True
             mag_just_opened = False
     return mag_just_closed
-                
+
 if __name__ == "__main__":
     """
     To find the address, once your sensor tag is blinking the green led after pressing the button, run the discover.py

@@ -5,6 +5,10 @@ from credentials import bot_token, bot_user_name,URL
 
 import telegram
 import logging
+import asyncio
+import cc2650_manual_read as sensortag
+
+light_value = 0
 
 import nltk
 nltk.download('punkt') #NEED TO RUN THIS THE FIRST TIME YOU USE IT
@@ -18,6 +22,8 @@ logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
+
+import picture_click as camera
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
@@ -48,6 +54,10 @@ def set_webhook():
 def index():
     return '.'
 
+def check_health(update):
+    health = sensortag.temperature_check()
+    message = str(health)
+    return message
 
 if __name__ == '__main__':
     app.run(threaded=True)
@@ -63,5 +73,7 @@ def get_response(msg, update):
 
     if msg == "/start":
         return start_info(update)
+    elif msg == "/health_check":
+        return check_health(update)
     else:
         return "Wrong input"
