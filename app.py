@@ -57,6 +57,8 @@ def index():
 def check_health(update):
     health = sensortag.temperature_check()
     message = str(health)
+    if message == '':
+        message = "fail"
     return message
 
 if __name__ == '__main__':
