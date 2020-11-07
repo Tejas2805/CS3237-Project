@@ -12,13 +12,11 @@ Jinja2==2.11.2
 MarkupSafe==1.1.1
 nltk==3.4.5
 numpy==1.19.4
+opencv-contrib-python==4.4.0.44
 opencv-python==4.4.0.46
 paho-mqtt==1.5.1
 pycparser==2.20
-pyobjc-core==6.2.2
-pyobjc-framework-Cocoa==6.2.2
-pyobjc-framework-CoreBluetooth==6.2.2
-pyobjc-framework-libdispatch==6.2.2
+pythonnet==2.5.1
 python-telegram-bot==13.0
 pytz==2020.4
 six==1.15.0
