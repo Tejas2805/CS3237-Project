@@ -14,14 +14,10 @@ bot = telegram.Bot(token=TOKEN)
 
 app = Flask(__name__)
 
-from dbhelper import DBHelper
-import vocabquery
-
 logging.basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
-
 
 @app.route('/{}'.format(TOKEN), methods=['POST'])
 def respond():
