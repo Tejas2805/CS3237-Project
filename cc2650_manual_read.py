@@ -98,6 +98,20 @@ class HumiditySensor(Sensor):
         # print(f"[HumiditySensor] Ambient temp: {temp}; Relative Humidity: {RH}")
         return temp, RH
 
+class GyrometerSensor(Sensor):
+    def __init__(self):
+        super().__init__()
+        self.data_uuid = "f000aa51-0451-4000-b000-000000000000"
+        self.ctrl_uuid = "f000aa52-0451-4000-b000-000000000000"
+        self.period_uuid = "f000aa33-0451-4000-b000-000000000000"
+        self.scale = 500.0/65536.0
+
+    def callback(self, sender: int, data: bytearray):
+        (x,y,z) = struct.unpack('<BBB', data)
+
+        #print(f"[BarometerSensor] Ambient temp: {temp}; Pressure Millibars: {press}")
+        return z*self.scale
+
 
 async def run(address):
     async with BleakClient(address) as client:
@@ -109,6 +123,7 @@ async def run(address):
         light_sensor = await OpticalSensor().enable(client)
         #humidity_sensor = await HumiditySensor().enable(client)
         barometer_sensor = await BarometerSensor().enable(client)
+        #gyro_sensor = await GyrometerSensor().enable(client)
 
         while True:
             # await asyncio.sleep(0.08)
@@ -118,7 +133,7 @@ async def run(address):
 
 def temperature_check():
     global light_value
-    return light_value
+    return "36"
 
 if __name__ == "__main__":
     """
