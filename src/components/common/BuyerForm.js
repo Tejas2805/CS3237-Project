@@ -2,7 +2,7 @@ import React from 'react';
 
 function BuyerForm(props) {
     return (
-        <form>
+        <form onSubmit={props.onSubmit}>
           <div className="form-group">
             <label htmlFor="title">Weight per Packet</label>
             <div className="field">
@@ -29,6 +29,7 @@ function BuyerForm(props) {
   />
   </div>
   </div>
+      <input type="submit" className="btn btn-primary" value="Save" />
         </form>
   );
 

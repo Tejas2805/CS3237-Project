@@ -31,7 +31,7 @@ const BuyerPage = props => {
 
   return (
       <div>
-      <BuyerForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} />
+      <BuyerForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} onSubmit={handleSubmit}/>
     </div>
   );
 }
