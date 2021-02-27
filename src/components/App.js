@@ -6,6 +6,8 @@ import VolunteerPage from './VolunteerPage';
 import BuyerPage from './BuyerPage';
 import Header from './common/Header';
 import { Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
 

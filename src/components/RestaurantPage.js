@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import Header from "./common/Header";
 import RestaurantForm from "./common/RestaurantForm";
+import { ToastContainer, toast } from 'react-toastify';
+import { Alert } from 'react-alert'
 
 const RestaurantPage = props => {
 
@@ -31,7 +33,7 @@ const RestaurantPage = props => {
   }
 
   function handleSubmit(event) {
-    alert('The form was submitted. ');
+    alert("Your file is being uploaded!");
     event.preventDefault();
   }
 
