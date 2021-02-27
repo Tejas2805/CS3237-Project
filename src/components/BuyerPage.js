@@ -1,3 +1,4 @@
+import React from 'react';
 class BuyerPage extends React.Component{
   render() {
     return (
