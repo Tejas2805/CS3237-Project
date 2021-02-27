@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Header from "./common/Header";
 import RestaurantForm from "./common/RestaurantForm";
 
-const BuyerPage = props => {
+const RestaurantPage = props => {
 
   const [packet, setPacket] = useState({
     wt: "",
