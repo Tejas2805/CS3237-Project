@@ -15,19 +15,22 @@ return (
   />
   <div className="row">
         <div className="logo1">
-          <img src={logo1} width="200" height="200" />
+          <img src={logo1} width="275" height="183" />
         </div>
   </div>
   <p className="btn btn-primary"> CHINESE HOME COOKED FOOD  </p>
+  
   <div className="row">
         <div className="logo2">
-          <img src={logo2} width="200" height="200" />
+          <img src={logo2} width="252" height="200" />
         </div>
       </div>
+  
   <p className="btn btn-primary"> SOUTH INDIAN FOOD </p>
+  
   <div className="row">
         <div className="logo3">
-          <img src={logo3} width="200" height="200" />
+          <img src={logo3} width="275" height="183" />
         </div>
       </div>
   <p className="btn btn-primary"> WESTERN DELIGHTS </p>
