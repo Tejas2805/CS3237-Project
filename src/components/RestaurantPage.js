@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Header from "./common/Header";
 import RestaurantForm from "./common/RestaurantForm";
 import { ToastContainer, toast } from 'react-toastify';
-import { Alert } from 'react-alert'
+import Alert from 'react-bootstrap/Alert';
 
 const RestaurantPage = props => {
 
@@ -33,14 +33,16 @@ const RestaurantPage = props => {
   }
 
   function handleSubmit(event) {
-    alert("Your file is being uploaded!");
+    toast.success("Your form is submitted.");
+    props.history.push("/");
     event.preventDefault();
   }
+
 
   return (
       <div>
       <h1>Restaurant Form</h1>
-      <RestaurantForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} onCuisineChange={handleCuisineChange} />
+      <RestaurantForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} onCuisineChange={handleCuisineChange} onSubmit={handleSubmit} />
     </div>
   );
 }

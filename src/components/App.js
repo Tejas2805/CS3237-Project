@@ -13,6 +13,7 @@ function App() {
 
   return (
     <div className="container-fluid">
+        <ToastContainer autoClose={3000} hideProgressBar />
         <Header />
         <Route path="/" exact component={HomePage} />
         <Route path="/about" component={AboutPage} />
