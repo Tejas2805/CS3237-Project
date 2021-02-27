@@ -25,12 +25,13 @@ const RestaurantPage = props => {
   }
 
   function handleSubmit(event) {
-    alert('An essay was submitted: ');
+    alert('The form was submitted. ');
     event.preventDefault();
   }
 
   return (
       <div>
+      <h1>Restaurant Form</h1>
       <RestaurantForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} />
     </div>
   );

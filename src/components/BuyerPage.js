@@ -31,7 +31,7 @@ const BuyerPage = props => {
 
   return (
       <div>
-      <BuyerForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} onSubmit={handleSubmit}/>
+     <h1> Buyer here </h1>
     </div>
   );
 }
