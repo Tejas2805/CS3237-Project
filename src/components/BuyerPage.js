@@ -29,9 +29,9 @@ const BuyerPage = props => {
     event.preventDefault();
   }
 
-    return (
-        <div>
-        <BuyerForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} />
+  return (
+      <div>
+      <BuyerForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} />
     </div>
   );
 }

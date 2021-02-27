@@ -1,14 +1,13 @@
-import React from 'react';
-
-class VolunteerPage extends React.Component{
+import React, { Component } from 'react';
+import logo from '../Gmaps.png';
+export default class Header extends Component {
   render() {
     return (
-        <div>
-        <h2> About </h2>
-        <p> This app uses React</p>
-    </div>
-  );
+      <div className="row">
+        <div className="logo">
+          <img src={logo} width="1000" height="1000" />
+        </div>
+      </div>
+    );
   }
-}
-
-export default VolunteerPage
+} 
