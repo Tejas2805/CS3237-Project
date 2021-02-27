@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import AboutPage from "./components/AboutPage";
 import App from "./components/App";
 import {BrowserRouter as Router} from "react-router-dom";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <Router>
