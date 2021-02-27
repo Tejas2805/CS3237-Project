@@ -1,6 +1,9 @@
 import React from 'react';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
+import RestaurantPage from './RestaurantPage';
+import VolunteerPage from './VolunteerPage';
+import BuyersPage from './BuyersPage';
 import Header from './common/Header';
 import { Route } from 'react-router-dom';
 
