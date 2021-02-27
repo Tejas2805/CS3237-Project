@@ -5,8 +5,9 @@ import RestaurantForm from "./common/RestaurantForm";
 const RestaurantPage = props => {
 
   const [packet, setPacket] = useState({
-    wt: "",
-    numOfPacket: ""
+    wt: "0.3g",
+    numOfPacket: "",
+    cuisine:"Asian"
   });
 
   function handleTitleChange(event) {
@@ -16,6 +17,11 @@ const RestaurantPage = props => {
 
   function handleNmChange(event) {
     const updatedPacket = {...packet, numOfPacket:event.target.value};
+    setPacket(updatedPacket);
+  }
+
+  function handleCuisineChange(event) {
+    const updatedPacket = {...packet, cuisine:event.target.value};
     setPacket(updatedPacket);
   }
 
@@ -32,7 +38,7 @@ const RestaurantPage = props => {
   return (
       <div>
       <h1>Restaurant Form</h1>
-      <RestaurantForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} />
+      <RestaurantForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} onCuisineChange={handleCuisineChange} />
     </div>
   );
 }

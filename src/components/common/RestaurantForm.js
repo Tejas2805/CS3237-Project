@@ -29,6 +29,25 @@ function RestaurantForm(props) {
   />
   </div>
   </div>
+  <div className="form-group">
+    <label htmlFor="title">Cuisine</label>
+  <div className="field">
+      <select
+  id="title"
+  type="text"
+  onChange={props.onCuisineChange}
+  name="cuisine"
+  className="form-control"
+  value={props.packet.cuisine}>
+    <option value="Asian">Asian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Italian">Italian</option>
+            <option value="Thai">Thai</option>
+            <option value="North Indian">North Indian</option>
+    </select>
+  </div>
+  </div>
+  
       <input type="submit" className="btn btn-primary" value="Save" />
         </form>
   );
