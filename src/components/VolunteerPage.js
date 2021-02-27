@@ -5,7 +5,7 @@ export default class Header extends Component {
     return (
       <div className="row">
         <div className="logo">
-          <img src={logo} width="100" height="50" />
+          <img src={logo} width="1000" height="1000" />
         </div>
       </div>
     );
