@@ -18,19 +18,19 @@ return (
           <img src={logo1} width="1000" height="1000" />
         </div>
   </div>
-  <p> <className="btn btn-primary"> CHINESE HOME COOKED FOOD  </p>
+  <p className="btn btn-primary"> CHINESE HOME COOKED FOOD  </p>
   <div className="row">
         <div className="logo2">
           <img src={logo} width="1000" height="1000" />
         </div>
       </div>
-  <p> <className="btn btn-primary"> SOUTH INDIAN FOOD </p>
+  <p className="btn btn-primary"> SOUTH INDIAN FOOD </p>
   <div className="row">
         <div className="logo3">
           <img src={logo} width="1000" height="1000" />
         </div>
       </div>
-  <p> <className="btn btn-primary"> WESTERN DELIGHTS </p>
+  <p className="btn btn-primary"> WESTERN DELIGHTS </p>
   
   </div>
 )
