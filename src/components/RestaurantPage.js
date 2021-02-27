@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Header from "./common/Header";
-import BuyerForm from "./common/BuyerForm";
+import RestaurantForm from "./common/RestaurantForm";
 
 const BuyerPage = props => {
 
@@ -31,9 +31,9 @@ const BuyerPage = props => {
 
   return (
       <div>
-      <BuyerForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} />
+      <RestaurantForm packet={packet} onTitleChange={handleTitleChange} onNmChange={handleNmChange} />
     </div>
   );
 }
 
-export default BuyerPage
+export default RestaurantPage
