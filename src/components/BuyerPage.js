@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import SearchField from 'react-search-field';
 
 <SearchField 
