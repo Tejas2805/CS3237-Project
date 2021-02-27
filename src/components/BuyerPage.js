@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import SearchField from 'react-search-field';
-import logo1 from '../Chinese.jfif';
-import logo2 from '../south indiam.jfif';
-import logo3 from '../western.jfif';
+import logo1 from './Chinese.jfif';
+import logo2 from './south_indian.jfif';
+import logo3 from './western.jfif';
 
 const BuyerPage = props => {
 
